@@ -1,0 +1,234 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* Root Variables for Colors and Fonts */
+:root {
+  --primary-color: #2E8B57;     /* Sea Green */
+  --secondary-color: #556B2F;   /* Dark Olive Green */
+  --accent-color: #8FBC8F;      /* Dark Sea Green */
+  --background-color: #F5FFFA;  /* Mint Cream */
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: var(--accent-color);
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+ /*background-image: url('hero-image.jpg'); *//* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h1 span {
+  color: var(--accent-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.hero .btn {
+  background-color: var(--accent-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.features .feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.features .card {
+  background-color: var(--background-color);
+  flex: 1;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.features .card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.features .card p {
+  color: #555;
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 4rem 0;
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.how-it-works ol {
+  list-style: decimal inside;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.how-it-works li {
+  margin-bottom: 1rem;
+}
+
+/* Download Section */
+.download {
+  padding: 4rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.download h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.download p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.download .btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide navigation links and button */
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .btn {
+    display: none;
+  }
+
+  /* Stack feature cards vertically */
+  .features .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .card {
+    margin: 1rem 0;
+  }
+}
