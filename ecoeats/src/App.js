@@ -1,8 +1,11 @@
 import React from 'react';
 import './styles.css'; // Make sure to create this CSS file
+import GetStarted from './Pages/getstarted';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Import necessary components
 
 function App() {
   return (
+    <Router>
     <>
       {/* Navigation Bar */}
       <nav className="navbar">
@@ -21,9 +24,9 @@ function App() {
               <a href="#download">Download</a>
             </li>
           </ul>
-          <a href="#get-started" className="btn">
+          <Link to = "/getstarted" className="btn">
             Get Started
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -43,6 +46,11 @@ function App() {
         </div>
       </header>
 
+        {/* Define your Routes */}
+   <Routes>
+          {/* Default content, for the homepage */}
+          <Route path="/" element={
+            <>
       {/* Features Section */}
       <section id="features" className="features">
         <div className="container">
@@ -104,6 +112,13 @@ function App() {
         </div>
       </footer>
     </>
+   } />
+    {/* Get Started Page Route */}
+    <Route path="/getstarted" element={<GetStarted />} /> 
+    {/* Link to the new page */}
+      </Routes>
+    </>
+    </Router>
   );
 }
 
