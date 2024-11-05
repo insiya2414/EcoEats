@@ -8,14 +8,14 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD_R_7KAl2yPchsRdHvXfjuQyeYIErnDqo",
-  authDomain: "ecoeats-hci.firebaseapp.com",
-  projectId: "ecoeats-hci",
-  storageBucket: "ecoeats-hci.firebasestorage.app",
-  messagingSenderId: "504273575153",
-  appId: "1:504273575153:web:f38852641831e748679d50",
-  measurementId: "G-FDMHH87B9L"
-};
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId:process.env.REACT_APP_MEASUREMENT_APP_ID,
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -24,3 +24,4 @@ const auth = getAuth(app);
 // Use the Configuration in Other Files: In other JavaScript files where you need to use Firebase services, import the configuration like this:
 export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
 // import { app, db } from './firebaseConfig';
+console.log("Firebase Project ID:", process.env.REACT_APP_FIREBASE_PROJECT_ID);
