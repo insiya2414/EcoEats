@@ -7,7 +7,7 @@ import Ingredients from './Pages/ingredients';
 import Login from './Pages/login';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-
+import Dashboard from './Pages/Dashboard';
 
 function App() {
     return (
@@ -18,6 +18,7 @@ function App() {
                     <Route path="get-started" element={<Login />} />
                     <Route path="ingredients" element={<Ingredients />} />
                     <Route path="login" element={<Login />} />
+                    <Route path="dashboard" element={<Dashboard />} />
                 </Route>
             </Routes>
         </Router>
