@@ -4,6 +4,7 @@ import Layout from './Components/Layout';
 import Homepage from './Pages/homepage';
 import GetStarted from './Pages/getstarted';
 import Ingredients from './Pages/ingredients';
+import Login from './Pages/login';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route index element={<Homepage />} />
                     <Route path="get-started" element={<GetStarted />} />
                     <Route path="ingredients" element={<Ingredients />} />
+                    <Route path="login" element={<Login />} />
                 </Route>
             </Routes>
         </Router>
