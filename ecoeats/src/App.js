@@ -5,6 +5,9 @@ import Homepage from './Pages/homepage';
 import GetStarted from './Pages/getstarted';
 import Ingredients from './Pages/ingredients';
 import Login from './Pages/login';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+
 
 function App() {
     return (
