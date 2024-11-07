@@ -1,0 +1,86 @@
+/* Wrapper to center everything on the page */
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f4ef; /* Soft background color for elegance */
+}
+
+/* Centered container */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #eaf5e2;
+    border-radius: 13px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Individual card styling with background images */
+.card,
+.receipt_card,
+.recipes_card,
+.pantry_card  {
+    width: 180px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #3d3b3f;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Specific backgrounds for each card */
+.receipt_card {
+    
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('../assets/download receits.jpg');
+}
+
+.recipes_card {
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('../assets/download receipes.jpg');
+}
+
+.pantry_card {
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('../assets/food-pantry-shelves-8e01c831-2b2be0d3eade4b9e9ec3c7e7deb27027.jpg');
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust text styling */
+.card h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
