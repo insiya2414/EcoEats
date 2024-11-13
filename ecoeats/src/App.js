@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Components/Layout';
 import Homepage from './Pages/homepage';
-import GetStarted from './Pages/getstarted';
 import Ingredients from './Pages/ingredients';
 import Login from './Pages/login';
 import { initializeApp } from 'firebase/app';
