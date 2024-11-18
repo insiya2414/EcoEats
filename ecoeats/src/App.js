@@ -8,6 +8,9 @@ import Login from './Pages/login';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import Dashboard from './Pages/Dashboard';
+import ScanReceipt from './Pages/ScanReceipt'; // Ensure these are imported
+import GenerateRecipes from './Pages/GenerateRecipes';
+import PantryItems from './Pages/PantryItems';
 
 function App() {
     return (
@@ -19,6 +22,9 @@ function App() {
                     <Route path="ingredients" element={<Ingredients />} />
                     <Route path="login" element={<Login />} />
                     <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="/scan-receipt" element={<ScanReceipt />} />
+                <Route path="/generate-recipes" element={<GenerateRecipes />} />
+                <Route path="/pantry-items" element={<PantryItems />} />
                 </Route>
             </Routes>
         </Router>
