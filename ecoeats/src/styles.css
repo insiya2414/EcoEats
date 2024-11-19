@@ -1,105 +1,132 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* Root Variables for Colors and Fonts */
+
 :root {
-  --primary-color: #2E8B57;     /* Sea Green */
-  --secondary-color: #556B2F;   /* Dark Olive Green */
-  --accent-color: #8FBC8F;      /* Dark Sea Green */
-  --background-color: #F5FFFA;  /* Mint Cream */
-  --font-family: 'Poppins', sans-serif;
+ --primary-color: #859F3D;     /* Sea Green */
+ --secondary-color: #1A1A19;   /* Dark Olive Green */
+ --accent-color: #31511E;      /* Dark Sea Green */
+ --background-color: #859F3D;  /* Mint Cream */
+ --font-family: 'Poppins', sans-serif;
 }
 
-/* Reset and Base Styles */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
+
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--background-color);
-  color: #333;
-  line-height: 1.6;
+ font-family: var(--font-family);
+ color: #333;
+ line-height: 1.6;
 }
+
 
 /* Container */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1em;
 }
+
 
 /* Navigation Bar */
 .navbar {
-  background-color: var(--primary-color);
-  padding: 1rem 0;
+ padding: 1rem 0;
+   padding: 1rem 0;
+   position: fixed; /* Add this to keep navbar fixed at top */
+   width: 100%;
+   top: 0;
+
+
 }
+
 
 .navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 }
 
+
+/* add logo on */
 .navbar .logo {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
+ color: #ffffff;
+ font-size: 1.5rem;
+ text-decoration: none;
+ font-size: 40px;
 }
+
 
 .navbar .logo span {
-  color: var(--accent-color);
+ color: white;
 }
+
 
 .navbar .nav-links {
-  list-style: none;
-  display: flex;
+ list-style: none;
+ display: flex;
+ text-align: center;
 }
+
 
 .navbar .nav-links li {
-  margin-left: 2rem;
+ margin-left: 2rem;
 }
+
 
 .navbar .nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
+ color: #fff;
+ text-decoration: none;
+ font-weight: 500;
 }
 
+
 .navbar .btn {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 500;
+ background-color: var(--accent-color);
+ color: #fff;
+ padding: 0.5rem 1rem;
+ border-radius: 5px;
+ text-decoration: none;
+ margin-left: 2rem;
+ font-weight: 500;
 }
+
 
 /* Hero Section */
 .hero {
- /*background-image: url('hero-image.jpg'); *//* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 0;
+ background-color: #6db986;
+ background-size: cover;
+ min-height: 100vh;
+ display: flex;
+ background-position: center;
+ color: #ffffff; /* originally #fff*/
+ text-align: center;
+ align-items: center;
+ justify-content: center;
 }
+
 
 .hero h1 {
-  font-size: 2.5rem;
+ font-size: 75px;
+ text-align: left;
 }
+
 
 .hero h1 span {
-  color: var(--accent-color);
+ color: var(--accent-color);
 }
 
+
 .hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
+ font-size: 30px;
+ margin: 1rem 0;
 }
+
 
 .hero .btn {
   background-color: var(--accent-color);
