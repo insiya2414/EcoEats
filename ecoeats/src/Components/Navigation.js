@@ -1,32 +1,32 @@
 import React from 'react';
-import '../styles.css'; // Make sure to create this CSS file
+import './Navigation.css';
 import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
-    <div>
-    <nav className="navbar">
-            <div className="container">
-                <Link to="/" className="logo">
-                    Eco<span>Eats</span>
-                </Link>
-                <ul className="nav-links">
-                    <li>
-                        <a href="#features">Features</a>
-                    </li>
-                    <li>
-                        <a href="#how-it-works">How It Works</a>
-                    </li>
-                    <li>
-                        <Link to="/ingredients">Your Ingredients List</Link>
-                    </li>
-                </ul>
-                <Link to="/get-started" className="btn">
-                    Get Started
-                </Link>
-            </div>
-        </nav>
-    </div>
+    <header>
+      <figure className="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </figure>
+      <nav className="navbar">
+        <ul>
+          <li>
+            <a href="#features">Features</a>
+          </li>
+          <li>
+            <a href="#how-it-works">How It Works</a>
+          </li>
+          <li>
+            <Link to="/ingredients">Your Ingredients List</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="btn-container">
+        <Link to="/get-started" className="btn">
+          Get Started
+        </Link>
+      </div>
+    </header>
   );
 }
 

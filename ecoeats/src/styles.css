@@ -10,96 +10,10 @@
  --font-family: 'Poppins', sans-serif;
 }
 
-
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-
-body {
- font-family: var(--font-family);
- color: #333;
- line-height: 1.6;
-}
-
-
-/* Container */
-.container {
- width: 90%;
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 1em;
-}
-
-
-/* Navigation Bar */
-.navbar {
- padding: 1rem 0;
-   padding: 1rem 0;
-   position: fixed; /* Add this to keep navbar fixed at top */
-   width: 100%;
-   top: 0;
-
-
-}
-
-
-.navbar .container {
- display: flex;
- align-items: center;
- justify-content: space-between;
-}
-
-
-/* add logo on */
-.navbar .logo {
- color: #ffffff;
- font-size: 1.5rem;
- text-decoration: none;
- font-size: 40px;
-}
-
-
-.navbar .logo span {
- color: white;
-}
-
-
-.navbar .nav-links {
- list-style: none;
- display: flex;
- text-align: center;
-}
-
-
-.navbar .nav-links li {
- margin-left: 2rem;
-}
-
-
-.navbar .nav-links a {
- color: #fff;
- text-decoration: none;
- font-weight: 500;
-}
-
-
-.navbar .btn {
- background-color: var(--accent-color);
- color: #fff;
- padding: 0.5rem 1rem;
- border-radius: 5px;
- text-decoration: none;
- margin-left: 2rem;
- font-weight: 500;
-}
-
-
+   
 /* Hero Section */
 .hero {
- background-color: #6db986;
+ background-color: #26984c;
  background-size: cover;
  min-height: 100vh;
  display: flex;
