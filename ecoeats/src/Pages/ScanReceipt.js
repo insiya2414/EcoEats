@@ -91,20 +91,21 @@ function ScanReceipt() {
     };
 
     const processExtractedText = (text) => {
-        console.log('Raw OCR Text:', text); // Debugging
+        console.log('Raw OCR Text:', text); // Debugging the OCR output
     
         const lines = text.split('\n').map((line) => line.trim());
         let restaurantName = 'Unknown';
         let date = 'Unknown';
         let address = 'Unknown';
         const items = [];
-        let subtotal = 0;
         let tax = 0;
         let total = 0;
     
         let currentItem = null;
     
         lines.forEach((line, index) => {
+            console.log(`Processing Line ${index}:`, line); // Debugging each line
+    
             // Detect restaurant/store name
             if (!restaurantName || restaurantName === 'Unknown') {
                 const nameMatch = line.match(/(Joe's Diner|.*Diner|.*Restaurant|.*Cafe)/i);
@@ -121,29 +122,7 @@ function ScanReceipt() {
                 }
             }
     
-            // Detect address
-            if (!address || address === 'Unknown') {
-                if (line.match(/Ocean City, NJ/i)) {
-                    address = 'Ocean City, NJ';
-                }
-            }
-    
-            // Detect items with price on the next line
-            const itemMatch = line.match(/^(\d+)\s*x\s+(.+)/i); // Matches "1 x ItemName"
-            if (itemMatch) {
-                currentItem = {
-                    quantity: itemMatch[1],
-                    product: itemMatch[2].trim(),
-                    price: 0, // Price to be added from the next line
-                };
-            } else if (currentItem && line.match(/^\$?(\d+\.\d{2})$/)) {
-                // Add price from the next line
-                currentItem.price = parseFloat(line.replace('$', ''));
-                items.push(currentItem);
-                currentItem = null; // Reset
-            }
-    
-            // Detect single-line items like "1 x Pie $7.00"
+            // Detect single-line items
             const singleLineItemMatch = line.match(/^(\d+)\s*x\s+(.+?)\s+\$?(\d+\.\d{2})/i);
             if (singleLineItemMatch) {
                 items.push({
@@ -154,15 +133,20 @@ function ScanReceipt() {
             }
     
             // Detect tax
-            if (line.match(/^Tax$/i) && lines[index + 1].match(/^\$?(\d+\.\d{2})$/)) {
+            if (line.match(/^Tax$/i) && lines[index + 1]?.match(/^\$?(\d+\.\d{2})$/)) {
                 tax = parseFloat(lines[index + 1].replace('$', ''));
             }
     
             // Detect total
-            if (line.match(/^\$\d+\.\d{2}$/)) {
+            if (line.match(/^\$\d+\.\d{2}$/) && index === lines.length - 1) {
                 total = parseFloat(line.replace('$', ''));
             }
         });
+    
+        // Final Validation
+        if (items.length === 0 || total === 0) {
+            console.error('Error: No items or total found in the receipt.');
+        }
     
         return {
             restaurantName,
@@ -174,7 +158,7 @@ function ScanReceipt() {
         };
     };
     
-
+        
     const saveToFirestore = async (data) => {
         try {
             await addDoc(collection(db, 'receipts'), data);
