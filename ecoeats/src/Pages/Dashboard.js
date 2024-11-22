@@ -1,14 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import './Dashboard.css';
 
 function Dashboard() {
+    const navigate = useNavigate(); //added this for navigation on dashboard
+
     const handleCardClick = (action) => {
         if (action === 'scan') {
             console.log("Navigate to Scan Receipt");
             // Add navigation or logic for Scan Receipt
         } else if (action === 'recipes') {
-            console.log("Navigate to Generate Recipes");
-            // Add navigation or logic for Generate Recipes
+            navigate('/generate-recipes');
+            //console.log("Navigate to Generate Recipes");(Add navigation or logic for Generate Recipes)
         } else if (action === 'pantry') {
             console.log("Navigate to Pantry Items");
             // Add navigation or logic for Pantry Items

@@ -19,7 +19,7 @@ function Navigation() {
                     <Link to= "/#how-it-works">How It Works</Link>
                     </li>
                     <li>
-                        <Link to="/ingredients">Your Ingredients List</Link>
+                        <Link to="/ingredients">Dashboard</Link>
                     </li>
                 </ul>
                 <Link to="/get-started" className="btn">
