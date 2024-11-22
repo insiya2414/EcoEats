@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles.css'; // Make sure to create this CSS file
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Navigation() {
   return (
@@ -12,13 +12,13 @@ function Navigation() {
                 </Link>
                 <ul className="nav-links">
                     <li>
-                        <a href="#features">Features</a>
+                    <Link to= "/#features">Features</Link>
                     </li>
                     <li>
-                        <a href="#how-it-works">How It Works</a>
+                    <Link to= "/#how-it-works">How It Works</Link>
                     </li>
                     <li>
-                        <Link to="/ingredients">Your Ingredients List</Link>
+                        <Link to="/ingredients">Dashboard</Link>
                     </li>
                 </ul>
                 <Link to="/get-started" className="btn">
