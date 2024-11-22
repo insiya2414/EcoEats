@@ -1,0 +1,98 @@
+/* Pantry Section Styling */
+.pantry-container {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%; /* Use a percentage to scale dynamically */
+    max-width: 800px; /* Limit the maximum width for large screens */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.pantry-container h1 {
+    font-size: 1.8rem;
+    color: #2D6A4F; /* Dark green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pantry-container h2 {
+    font-size: 1.2rem;
+    color: #40916C; /* Lighter green */
+    margin-bottom: 10px;
+}
+
+/* Add New Item Form */
+.pantry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.pantry-form label {
+    font-weight: bold;
+    color: #2D6A4F;
+}
+
+.pantry-form input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #B7E4C7;
+    border-radius: 5px;
+    background-color: #F0FDF4;
+    width: 100%; /* Make inputs responsive */
+    max-width: 300px; /* Limit the input width */
+}
+
+.pantry-form button {
+    padding: 10px 20px; /* Set padding for a fixed size */
+    width: auto; /* Ensure the button adjusts to content */
+    background-color: #2D6A4F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pantry-form button:hover {
+    background-color: #40916C; /* Slightly lighter green */
+}
+
+/* Pantry Items List */
+.pantry-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pantry-list li {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #E9F5E9;
+    border: 1px solid #B7E4C7;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Layout */
+@media (min-width: 1200px) {
+    .pantry-container {
+        width: 70%; /* Wider for large screens */
+    }
+}
+
+.pantry-list li h2 {
+    font-size: 1rem;
+    color: #2D6A4F;
+    margin-bottom: 10px;
+}
+
+.pantry-list li p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #333;
+}
