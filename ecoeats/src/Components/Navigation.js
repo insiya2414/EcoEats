@@ -18,7 +18,7 @@ function Navigation() {
                     <Link to= "/#how-it-works">How It Works</Link>
                     </li>
                     <li>
-                        <Link to="/ingredients">Dashboard</Link>
+                        <Link to="/Dashboard">Dashboard</Link>
                     </li>
                 </ul>
                 <Link to="/get-started" className="btn">
