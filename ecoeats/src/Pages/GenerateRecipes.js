@@ -1,6 +1,5 @@
 // GenerateRecipes.js
 import { useState } from "react";
-import { useNavigation } from "react-router-dom";
 import './GenerateRecipes.css';
 import axios from 'axios';
 
