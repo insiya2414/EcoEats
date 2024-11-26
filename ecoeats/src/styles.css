@@ -1,105 +1,140 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* Root Variables for Colors and Fonts */
+
 :root {
-  --primary-color: #2E8B57;     /* Sea Green */
-  --secondary-color: #556B2F;   /* Dark Olive Green */
-  --accent-color: #8FBC8F;      /* Dark Sea Green */
-  --background-color: #F5FFFA;  /* Mint Cream */
-  --font-family: 'Poppins', sans-serif;
+ --primary-color: #859F3D;     /* Sea Green */
+ --secondary-color: #1A1A19;   /* Dark Olive Green */
+ --accent-color: #31511E;      /* Dark Sea Green */
+ --background-color: #859F3D;  /* Mint Cream */
+ --font-family: 'Poppins', sans-serif;
 }
 
-/* Reset and Base Styles */
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ list-style: none;
+}
+
+
+body {
+ font-family: var(--font-family);
+ color: #333;
+ line-height: 1.6;
+}
+
+
+/* Container */
+.container {
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1em;
+}
+
+
+/* Navigation Bar */
+/* General reset to remove unwanted margins/padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-family);
-  background-color: var(--background-color);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Navigation Bar */
-.navbar {
-  background-color: var(--primary-color);
-  padding: 1rem 0;
-}
-
-.navbar .container {
+/* Styling the header to position its contents */
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo {
-  color: #fff;
-  font-size: 1.5rem;
+/* Styling the logo */
+.logo img {
+  height: 50px; /* Adjust the logo height as needed */
+}
+
+/* Styling the navbar */
+.navbar {
+  flex-grow: 1;
+  margin-left: 30px; /* Creates some space between logo and nav links */
+}
+
+.navbar ul {
+  display: flex; /* Makes the list items align horizontally */
+  list-style: none; /* Removes bullet points from the list */
+}
+
+/* Styling each navigation item */
+.navbar ul li {
+  margin-right: 20px; /* Space between each nav item */
+}
+
+.navbar ul li a {
   text-decoration: none;
+  font-size: 16px;
+  color: #333; /* Text color */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-.navbar .logo span {
-  color: var(--accent-color);
+.navbar ul li a:hover {
+  color: #007BFF; /* Change color when hovering */
 }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
+/* Styling the button container for Get Started */
+.btn-container {
+  margin-left: 20px; /* Space between nav and button */
 }
 
-.navbar .nav-links li {
-  margin-left: 2rem;
-}
-
-.navbar .nav-links a {
-  color: #fff;
+.btn {
   text-decoration: none;
-  font-weight: 500;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Button background color */
+  color: #fff; /* Button text color */
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-.navbar .btn {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 500;
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
+   
 /* Hero Section */
 .hero {
- /*background-image: url('hero-image.jpg'); *//* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 0;
+ background-color: #6db986;
+ background-size: cover;
+ min-height: 100vh;
+ display: flex;
+ background-position: center;
+ color: #ffffff; /* originally #fff*/
+ text-align: center;
+ align-items: center;
+ justify-content: center;
 }
+
 
 .hero h1 {
-  font-size: 2.5rem;
+ font-size: 75px;
+ text-align: left;
 }
+
 
 .hero h1 span {
-  color: var(--accent-color);
+ color: var(--accent-color);
 }
 
+
 .hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
+ font-size: 30px;
+ margin: 1rem 0;
 }
+
 
 .hero .btn {
   background-color: var(--accent-color);
