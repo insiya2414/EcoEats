@@ -24,7 +24,7 @@ function Homepage(){
 {/* Default content, for the homepage */}
 {/* Features Section */}
 <section id="features" className="features">
-<div className="container">
+<div className="feature-container">
   <h2>Features</h2>
   <h3>WASTE LESS, EAT MORE</h3>
   <h4>Transform leftovers into delicious meals!</h4>

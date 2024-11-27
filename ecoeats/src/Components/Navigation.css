@@ -6,8 +6,6 @@
   list-style: none;
  }
  
- /* Container */
- /* Navigation Bar */
  /* General reset to remove unwanted margins/padding */
  * {
    margin: 0;
@@ -36,13 +34,13 @@
  }
  
  .navbar ul {
-   display: flex; /* Makes the list items align horizontally */
-   list-style: none; /* Removes bullet points from the list */
+   display: flex; 
+   list-style: none; 
  }
  
  /* Styling each navigation item */
  .navbar ul li {
-   margin-right: 20px; /* Space between each nav item */
+   margin-right: 20px; 
  }
  
  .navbar ul li a {
@@ -59,17 +57,29 @@
  /* Styling the button container for Get Started */
  .btn-container {
    margin-left: 20px; /* Space between nav and button */
+   color: black;
  }
  
  .btn {
    text-decoration: none;
    padding: 10px 20px;
-   background-color: #007BFF; /* Button background color */
+   background-color: #e9542b; /* Button background color */
    color: #fff; /* Button text color */
    border-radius: 4px;
    transition: background-color 0.3s ease; /* Smooth transition on hover */
  }
  
  .btn:hover {
-   background-color: #0056b3; /* Darker shade on hover */
+   background-color: #e77f18; /* Darker shade on hover */
  }
+
+ @media (max-width: 768px) {
+  /* Hide navigation links and button */
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .btn {
+    display: none;
+  }
+}

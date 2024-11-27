@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.css';
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+function Navigation() {
   return (
     <header>        
       <figure className="logo">
@@ -11,13 +11,13 @@ const Navigation = () => {
       <nav className="navbar">
         <ul>
           <li>
-            <Link to="/#features">Features</Link>
+            <a href="#features">Features</a>
           </li>
           <li>
-            <Link to="/#how-it-works">How It Works</Link>
+            <a href="#how-it-works">How It Works</a>
           </li>
           <li>
-            <Link to="/#ingredients">Your Ingredients List</Link>
+            <Link to="#ingredients">Your Ingredients List</Link>
           </li>
         </ul>
       </nav>
@@ -28,6 +28,6 @@ const Navigation = () => {
       </div>
     </header>
   );
-};
+}
 
 export default Navigation;
