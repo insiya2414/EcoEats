@@ -10,100 +10,11 @@
  --font-family: 'Poppins', sans-serif;
 }
 
-
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- text-decoration: none;
- list-style: none;
-}
-
-
-body {
- font-family: var(--font-family);
- color: #333;
- line-height: 1.6;
-}
-
-
 /* Container */
-.container {
- width: 90%;
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 1em;
-}
-
-
 /* Navigation Bar */
 /* General reset to remove unwanted margins/padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Styling the header to position its contents */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling the logo */
-.logo img {
-  height: 50px; /* Adjust the logo height as needed */
-}
-
-/* Styling the navbar */
-.navbar {
-  flex-grow: 1;
-  margin-left: 30px; /* Creates some space between logo and nav links */
-}
-
-.navbar ul {
-  display: flex; /* Makes the list items align horizontally */
-  list-style: none; /* Removes bullet points from the list */
-}
-
-/* Styling each navigation item */
-.navbar ul li {
-  margin-right: 20px; /* Space between each nav item */
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: #333; /* Text color */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.navbar ul li a:hover {
-  color: #007BFF; /* Change color when hovering */
-}
-
-/* Styling the button container for Get Started */
-.btn-container {
-  margin-left: 20px; /* Space between nav and button */
-}
-
-.btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #007BFF; /* Button background color */
-  color: #fff; /* Button text color */
-  border-radius: 4px;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-}
-
-.btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
+/********************************************************************************************/
    
 /* Hero Section */
 .hero {

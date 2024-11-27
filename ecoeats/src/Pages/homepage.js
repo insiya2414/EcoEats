@@ -26,9 +26,10 @@ function Homepage(){
 <section id="features" className="features">
 <div className="container">
   <h2>Features</h2>
+  <h3>WASTE LESS, EAT MORE</h3>
+  <h4>Transform leftovers into delicious meals!</h4>
   <div className="feature-cards">
     <div className="card">
-      <h3>Personalized Recipes</h3>
       <p>
         Get recipe suggestions tailored to the ingredients you have on
         hand.

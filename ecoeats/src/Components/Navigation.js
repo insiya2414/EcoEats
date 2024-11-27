@@ -2,22 +2,22 @@ import React from 'react';
 import './Navigation.css';
 import { Link } from 'react-router-dom';
 
-function Navigation() {
+const Navigation = () => {
   return (
-    <header>
+    <header>        
       <figure className="logo">
         <img src="images/logo.png" alt="Logo" />
       </figure>
       <nav className="navbar">
         <ul>
           <li>
-            <a href="#features">Features</a>
+            <Link to="/#features">Features</Link>
           </li>
           <li>
-            <a href="#how-it-works">How It Works</a>
+            <Link to="/#how-it-works">How It Works</Link>
           </li>
           <li>
-            <Link to="/ingredients">Your Ingredients List</Link>
+            <Link to="/#ingredients">Your Ingredients List</Link>
           </li>
         </ul>
       </nav>
@@ -28,6 +28,6 @@ function Navigation() {
       </div>
     </header>
   );
-}
+};
 
 export default Navigation;
