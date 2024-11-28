@@ -7,49 +7,74 @@
  --secondary-color: #1A1A19;   /* Dark Olive Green */
  --accent-color: #31511E;      /* Dark Sea Green */
  --background-color: #859F3D;  /* Mint Cream */
- --font-family: 'Poppins', sans-serif;
 }
-   
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Hero Section */
 .hero {
- background-color: #6db986;
- background-size: cover;
- min-height: 100vh;
- display: flex;
- background-position: center;
- color: #ffffff; /* originally #fff*/
- text-align: center;
- align-items: center;
- justify-content: center;
+  background-color: #f7f7f7;
+  background-image: url("/Users/kissahussain/EcoEats/ecoeats/public/background3.jpg");
+  background-size: cover;
+  background-position: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: center; /* Vertically centers the content */
+  color: #ffffff; /* Text color */
+  position: relative; /* To allow absolute positioning for inner elements */
 }
 
+/* Container for Text Content */
+.hero .container {
+  position: absolute; /* Allows precise positioning */
+  top: 50%; /* Moves content down */
+  left: 20%; /* Adjusts horizontal position */
+  transform: translate(-20%, -60%); /* Centers content properly */
+  max-width: 600px; /* Restrict text width for better readability */
+  text-align: left; /* Align text to the left */
+}
 
+/* Hero Heading */
 .hero h1 {
- font-size: 75px;
- text-align: left;
+  font-size: 75px;
+  line-height: 1.2; /* Adjusts spacing between lines */
+  margin: 0; /* Removes default margin */
 }
-
 
 .hero h1 span {
- color: var(--accent-color);
+  color: var(--accent-color);
+  font-style: italic;
 }
 
-
+/* Hero Paragraph */
 .hero p {
- font-size: 30px;
- margin: 1rem 0;
+  font-size: 20px;
+  margin: 20px 0; /* Adds spacing below the paragraph */
 }
 
-
+/* Hero Button */
 .hero .btn {
-  background-color: var(--accent-color);
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #661707;
+  font-weight: 80px;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
+.hero .btn:hover {
+  background-color: var(--accent-color);
+  /* Darker shade on hover */
+}
+
 
 /* Features Section */
 .features {
@@ -93,6 +118,7 @@
   padding: 4rem 0;
   background-color: var(--accent-color);
   color: #fff;
+  text-align: center;
 }
 
 .how-it-works h2 {
@@ -153,14 +179,6 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  /* Hide navigation links and button */
-  .navbar .nav-links {
-    display: none;
-  }
-
-  .navbar .btn {
-    display: none;
-  }
 
   /* Stack feature cards vertically */
   .features .feature-cards {

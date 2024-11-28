@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <header>        
       <figure className="logo">
-        <img src="images/logo.png" alt="Logo" />
+        <img src="images/logo.png" alt="EcoEats" />
       </figure>
       <nav className="navbar">
         <ul>

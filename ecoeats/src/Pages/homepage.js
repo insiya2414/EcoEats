@@ -7,15 +7,15 @@ function Homepage(){
 {/* Hero Section */}
 <header className="hero">
 <div className="container">
-  <h1>
-    Reduce Food Waste with <span>EcoEats</span>
-  </h1>
+  <h1>Reduce Food</h1>
+  <h1>Waste with</h1>
+  <h1><span>EcoEats</span></h1>
   <p>
     Your personalized recipe assistant that turns leftovers into
     delicious meals.
   </p>
   <a href="#download" className="btn">
-    Download App
+    Get Started
   </a>
 </div>
 </header>
@@ -54,9 +54,7 @@ function Homepage(){
 <div className="container">
   <h2>How It Works</h2>
   <ol>
-    <li>
-      Scan your grocery receipts or manually add leftover ingredients.
-    </li>
+    <li>Scan your grocery receipts.</li>
     <li>Receive personalized recipe suggestions instantly.</li>
     <li>Enjoy your meal and reduce food waste!</li>
   </ol>
