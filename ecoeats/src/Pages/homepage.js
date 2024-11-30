@@ -61,20 +61,6 @@ function Homepage(){
 </div>
 </section>
 
-{/* Download Section */}
-<section id="download" className="download">
-<div className="container">
-  <h2>Download EcoEats Today</h2>
-  <p>Available on iOS and Android.</p>
-  <a className="btn">
-    Download for iOS
-  </a>
-  <a className="btn">
-    Download for Android
-  </a>
-</div>
-</section>
-
 {/* Footer */}
 <footer className="footer">
 <div className="container">
