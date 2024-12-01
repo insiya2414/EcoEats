@@ -13,28 +13,103 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+} 
+ 
+ /* Styling the header to position its contents */
+ header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   background-color: #90cfb775;;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Styling the logo */
+
+ /* Styling the navbar */
+ .navbar {
+   margin-left: 30px; /* Creates some space between logo and nav links */
+ }
+ 
+ .navbar ul {
+   display: flex; 
+   list-style: none; 
+ }
+ 
+ /* Styling each navigation item */
+ .navbar ul li {
+   margin-right: 20px; 
+ }
+ 
+ .navbar ul li a {
+   text-decoration: none;
+   font-size: 20px;
+   color: #333; /* Text color */
+   transition: color 0.3s ease; /* Smooth color transition on hover */
+ }
+ 
+ .navbar ul li a:hover {
+   color:#900b0b; /* Change color when hovering */
+ }
+ 
+ /* Styling the button container for Get Started */
+ .btn-container {
+   margin-left: 20px; /* Space between nav and button */
+   color: rgb(221, 71, 71);
+ }
+ 
+ .btn {
+   text-decoration: none;
+   padding: 10px 20px;
+   background-color: #450808; /* Button background color */
+   color: #fff; /* Button text color */
+   border-radius: 50px;
+   transition: background-color 0.3s ease; /* Smooth transition on hover */
+ }
+ 
+ .btn:hover {
+   background-color: #e77f18; /* Darker shade on hover */
+ }
+
+ @media (max-width: 768px) {
+  /* Hide navigation links and button */
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .btn {
+    display: none;
+  }
 }
 
 /* Hero Section */
 .hero {
-  background-color: #f7f7f7;
-  background-image: url("/Users/kissahussain/EcoEats/ecoeats/public/background3.jpg");
-  background-size: cover;
-  background-position: fixed;
+  background-image: url("/public/background5.jpg");
+  background-size:cover;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
   height: 100vh;
   display: flex;
   justify-content: flex-start; /* Aligns content to the left */
   align-items: center; /* Vertically centers the content */
   color: #ffffff; /* Text color */
-  position: relative; /* To allow absolute positioning for inner elements */
 }
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Makes sure the whole image is visible on small screens */
+    background-position: top; /* Adjust the position to make it more visible */
+  }
+}
+
 
 /* Container for Text Content */
 .hero .container {
   position: absolute; /* Allows precise positioning */
   top: 50%; /* Moves content down */
   left: 20%; /* Adjusts horizontal position */
-  transform: translate(-20%, -60%); /* Centers content properly */
+  transform: translate(-26%, -25%); /* Centers content properly */
   max-width: 600px; /* Restrict text width for better readability */
   text-align: left; /* Align text to the left */
 }
@@ -55,75 +130,74 @@
 .hero p {
   font-size: 20px;
   margin: 20px 0; /* Adds spacing below the paragraph */
+  line-height: .75; /* Adjusts spacing between lines */
+
 }
 
 /* Hero Button */
 .hero .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #661707;
+  background-color: #284f2d;
   font-weight: 80px;
   color: #fff;
   text-decoration: none;
   font-size: 30px;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: background-color 0.3s ease;
 }
 
 .hero .btn:hover {
-  background-color: var(--accent-color);
-  /* Darker shade on hover */
+  background-color: #450808;
 }
-
 
 /* Features Section */
 .features {
   padding: 4rem 0;
-  background-color: #fff;
-}
-
-.features h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  color: var(--secondary-colorprimary-color);
-}
-
-.features h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  color: var(--accent-color);
-}
-.features h4 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 20px;
-  color: var(--primary-color);
-}
-.features .feature-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.features .card {
-  background-color:rgb(154, 22, 15);
-  flex: 1;
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: 10px;
+  background-color: #f8f8f8; /* Neutral background for contrast */
   text-align: center;
 }
 
-.features .card h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+.features h1{
+  font-size: 50px;
 }
 
-.features .card p {
-  color: #dad5d5;
+.feature-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px;
+  flex-wrap: wrap; 
+  padding: 20px;
 }
+
+.feature-container img {
+  width: 200px; 
+  height: auto; 
+  border-radius: 10px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better visibility */
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.feature-container img:hover {
+  transform: translateY(-5px); /* Adds a slight lift effect on hover */
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .feature-container {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    align-items: center;
+  }
+
+  .feature-container img {
+    width: 80%; /* Make each image wider when in column mode for better visibility */
+    margin-bottom: 20px;
+  }
+}
+
+
+
 
 /* How It Works Section */
 .how-it-works {
@@ -150,31 +224,26 @@
   margin-bottom: 1rem;
 }
 
-/* Download Section */
-.download {
+
+/* about */
+.about{
   padding: 4rem 0;
-  background-color: #fff;
+  background-color: var(--primary-color);
+  color: #fff;
   text-align: center;
 }
 
-.download h2 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.download p {
+.about h2 {
+  text-align: center;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 3rem;
 }
 
-.download .btn {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  margin: 0.5rem;
-  font-weight: 500;
+.about ol {
+  list-style: decimal inside;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 
 /* Footer */
