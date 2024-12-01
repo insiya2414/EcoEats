@@ -4,82 +4,78 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
- }
- 
- /* General reset to remove unwanted margins/padding */
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
- 
- /* Styling the header to position its contents */
- header {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 20px;
-   background-color: #ffffff;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
+}
 
- /* Styling the logo */
- .logo img {
-   height: 50px; /* Adjust the logo height as needed */
- }
- 
- /* Styling the navbar */
- .navbar {
-   margin-left: 30px; /* Creates some space between logo and nav links */
- }
- 
- .navbar ul {
-   display: flex; 
-   list-style: none; 
- }
- 
- /* Styling each navigation item */
- .navbar ul li {
-   margin-right: 20px; 
- }
- 
- .navbar ul li a {
-   text-decoration: none;
-   font-size: 16px;
-   color: #333; /* Text color */
-   transition: color 0.3s ease; /* Smooth color transition on hover */
- }
- 
- .navbar ul li a:hover {
-   color: #007BFF; /* Change color when hovering */
- }
- 
- /* Styling the button container for Get Started */
- .btn-container {
-   margin-left: 20px; /* Space between nav and button */
-   color: black;
- }
- 
- .btn {
-   text-decoration: none;
-   padding: 10px 20px;
-   background-color: #e9542b; /* Button background color */
-   color: #fff; /* Button text color */
-   border-radius: 4px;
-   transition: background-color 0.3s ease; /* Smooth transition on hover */
- }
- 
- .btn:hover {
-   background-color: #e77f18; /* Darker shade on hover */
- }
+/* Styling the header to position its contents */
+header {
+  position: absolute; /* Allows the header to overlap other elements */
+  top: 0;
+  left: 0;
+  width: 100%; /* Makes the header stretch across the full width */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 10; /* Makes sure the header stays above the background image */
+}
 
- @media (max-width: 768px) {
-  /* Hide navigation links and button */
-  .navbar .nav-links {
+/* Styling the logo */
+.logo img {
+  max-height: 50px; /* Adjust the height of the logo */
+}
+
+/* Styling the navbar */
+.navbar {
+  margin-left: 30px; /* Creates some space between logo and nav links */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Styling each navigation item */
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff; /* Text color to make sure it's visible on the background */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar ul li a:hover {
+  color: #e77f18; /* Change color when hovering */
+}
+
+/* Styling the button container for Get Started */
+.btn-container {
+  margin-left: 20px; /* Space between nav and button */
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #450808; /* Button background color */
+  color: #fff; /* Button text color */
+  border-radius: 50px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.btn:hover {
+  background-color: #e77f18; /* Darker shade on hover */
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+  /* Hide navigation links and button on small screens */
+  .navbar ul {
     display: none;
   }
 
-  .navbar .btn {
+  .btn-container {
     display: none;
   }
 }
