@@ -130,7 +130,7 @@
 .hero p {
   font-size: 20px;
   margin: 20px 0; /* Adds spacing below the paragraph */
-  line-height: .75; /* Adjusts spacing between lines */
+  line-height: .75; 
 
 }
 
