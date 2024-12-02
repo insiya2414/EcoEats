@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios'; // For making HTTP requests
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebaseConfig'; // Import Firestore instance
+import './ScanReceipt.css';
 
 const preprocessImage = async (imageUrl) => {
     const img = new Image();
@@ -186,26 +187,27 @@ function ScanReceipt() {
     };
 
     return (
-        <div>
-            <h1>Scan Receipt</h1>
-            <p>Upload an image of your receipt to extract text and save to the database.</p>
+        <div className="sr-main-container">
+            <img src="/receipt.jpg" alt="Receipt Scanning" />
+                <h1>Scan Receipt</h1>
+                <p>Upload an image of your receipt.</p>
 
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
+                <input type="file" accept="image/*" onChange={handleImageUpload} />
 
-            {image && (
-                <div>
-                    <h3>Uploaded Image:</h3>
-                    <img src={image} alt="Uploaded Receipt" style={{ maxWidth: '400px', marginTop: '10px' }} />
-                </div>
-            )}
+                {image && (
+                    <div className="uploaded-image">
+                        <h3>Uploaded Image:</h3>
+                        <img src={image} alt="Uploaded Receipt" />
+                    </div>
+                )}
 
-            <button onClick={handleScan} disabled={loading} style={{ marginTop: '10px' }}>
-                {loading ? 'Scanning...' : 'Scan and Save'}
-            </button>
+                <button onClick={handleScan} disabled={loading} className="scan-button">
+                    {loading ? 'Scanning...' : 'Scan and Save'}
+                </button>
 
-            {message && <p>{message}</p>}
-        </div>
-    );
+                {message && <p className="message">{message}</p>}
+            </div>
+     );
 }
 
 export default ScanReceipt;
