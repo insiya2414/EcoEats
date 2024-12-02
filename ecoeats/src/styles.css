@@ -109,7 +109,7 @@
   position: absolute; /* Allows precise positioning */
   top: 50%; /* Moves content down */
   left: 20%; /* Adjusts horizontal position */
-  transform: translate(-26%, -25%); /* Centers content properly */
+  transform: translate(-30%, -30%); /* Centers content properly */
   max-width: 600px; /* Restrict text width for better readability */
   text-align: left; /* Align text to the left */
 }
