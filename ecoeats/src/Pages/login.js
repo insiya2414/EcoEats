@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '../firebaseConfig'; // Update with correct path if needed
 import { useNavigate } from 'react-router-dom';
+import './login.css'; // Make sure to create this CSS file
+
+
 
 function Login() {
     const [isLogin, setIsLogin] = useState(true); // Toggle between login and sign-up

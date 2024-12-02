@@ -1,13 +1,14 @@
 import React from 'react';
-import './Navigation.css';
+import '../styles.css'; // Make sure to create this CSS file
 import { Link } from 'react-router-dom';
+
 
 function Navigation() {
   return (
-    <header>
-      <figure className="logo">
-        <img src="images/logo.png" alt="Logo" />
-      </figure>
+    <header>        
+    <Link to="/">
+          <img src="/ecoeats.png" alt="EcoEats" />
+        </Link>
       <nav className="navbar">
         <ul>
           <li>
@@ -17,7 +18,7 @@ function Navigation() {
             <a href="#how-it-works">How It Works</a>
           </li>
           <li>
-            <Link to="/ingredients">Your Ingredients List</Link>
+          <a href="#about">About Us</a>
           </li>
         </ul>
       </nav>

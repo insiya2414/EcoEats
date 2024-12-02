@@ -1,5 +1,7 @@
 import React from "react";
 import '../styles.css'; // Make sure to create this CSS file
+import { Link } from 'react-router-dom';
+
 
 function Homepage(){
     return(
@@ -7,45 +9,32 @@ function Homepage(){
 {/* Hero Section */}
 <header className="hero">
 <div className="container">
-  <h1>
-    Reduce Food Waste with <span>EcoEats</span>
-  </h1>
+  <h1>Reduce</h1>
+  <h1>Food Waste with</h1>
+  <h1><span>EcoEats</span></h1>
   <p>
-    Your personalized recipe assistant that turns leftovers into
-    delicious meals.
+    Your personalized recipe assistant that 
   </p>
-  <a href="#download" className="btn">
-    Download App
-  </a>
+  <p>
+    turns leftovers into delicious meals.
+  </p>
+  <Link to="/login" className="btn">
+  Get Started
+</Link>
+
 </div>
 </header>
 
-{/* Define your Routes */}
-{/* Default content, for the homepage */}
-{/* Features Section */}
 <section id="features" className="features">
-<div className="container">
-  <h2>Features</h2>
-  <div className="feature-cards">
-    <div className="card">
-      <h3>Personalized Recipes</h3>
-      <p>
-        Get recipe suggestions tailored to the ingredients you have on
-        hand.
-      </p>
-    </div>
-    <div className="card">
-      <h3>Inventory Management</h3>
-      <p>Keep track of your pantry items and reduce food spoilage.</p>
-    </div>
-    <div className="card">
-      <h3>Receipt Scanning</h3>
-      <p>
-        Easily input ingredients by scanning your grocery receipts.
-      </p>
-    </div>
+  <div className="feature-container">
+    <h1>Features</h1>
+  <p>Scan Receipt</p>
+    <img src="/receipt.jpg" alt="Receipt Scanning" />
+    <p>Personalized Recipe</p>
+    <img src="/recipe.jpg" alt="Personalized Recipe" />
+    <p>Inventory Management</p>
+    <img src="/inventory.jpg" alt="Inventory Management" />
   </div>
-</div>
 </section>
 
 {/* How It Works Section */}
@@ -53,26 +42,24 @@ function Homepage(){
 <div className="container">
   <h2>How It Works</h2>
   <ol>
-    <li>
-      Scan your grocery receipts or manually add leftover ingredients.
-    </li>
+    <li>Scan your grocery receipts.</li>
     <li>Receive personalized recipe suggestions instantly.</li>
     <li>Enjoy your meal and reduce food waste!</li>
   </ol>
 </div>
 </section>
 
-{/* Download Section */}
-<section id="download" className="download">
+{/* about */}
+<section id="about" className="about">
 <div className="container">
-  <h2>Download EcoEats Today</h2>
-  <p>Available on iOS and Android.</p>
-  <a className="btn">
-    Download for iOS
-  </a>
-  <a className="btn">
-    Download for Android
-  </a>
+  <h2>About Us</h2>
+  <ol>
+    <p> College students often face challenges with food waste due to tight budgets, 
+busy schedules, and limited cooking skills. Leftovers are frequently discarded, 
+leading to increased costs and environmental impact. Our project tackles this 
+problem with an AI-powered app that helps students creatively repurpose leftover ingredients, 
+promoting sustainability and saving money.</p>
+  </ol>
 </div>
 </section>
 
