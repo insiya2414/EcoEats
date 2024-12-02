@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigation } from "react-router-dom";
 import './GenerateRecipes.css';
 import axios from 'axios';
+//import { getFunctions, httpsCallable } from 'firebase/functions';
 
 
 const GenerateRecipes = () => {
@@ -13,6 +14,8 @@ const GenerateRecipes = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
   
+
+    
     const searchRecipes = async () => {
       setIsLoading(true);
       setError(null);
