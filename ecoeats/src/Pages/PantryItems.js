@@ -62,8 +62,9 @@ function PantryItems() {
     return (
         <div className="pantry-container">
             <h1>Pantry Items</h1>
+            <img src="/inventory.jpg" alt="Receipt Scanning" />
             <form className="pantry-form" onSubmit={addPantryItem}>
-                <h2>Add a New Pantry Item</h2>
+                <h2>Add a New Item</h2>
                 <label>
                     Product Name:
                     <input
@@ -101,7 +102,13 @@ function PantryItems() {
                     ))}
                 </ul>
             )}
+            <div className="back-button-container">
+                <button onClick={() => window.history.back()} className="back-button">
+                    &larr; 
+                </button>
+            </div>
         </div>
+        
     );
 }
 
