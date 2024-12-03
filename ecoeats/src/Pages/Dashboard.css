@@ -83,17 +83,17 @@
 /* Specific backgrounds for each card */
 .receipt_card {
     background-image: 
-    url(/Users/kissahussain/EcoEats/ecoeats/public/receipt.jpg)
+    url(/public/receipt.jpg)
 }
 
 .recipes_card {
     background-image: 
-    url(/Users/kissahussain/EcoEats/ecoeats/public/recipe.jpg)
+    url(/public/recipe.jpg)
 }
 
 .pantry_card {
     background-image: 
-    url('/Users/kissahussain/EcoEats/ecoeats/public/inventory.jpg');
+    url(/public/inventory.jpg);
 }
 
 /* Adjust text styling to stand out */
