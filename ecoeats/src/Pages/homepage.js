@@ -56,11 +56,25 @@ function Homepage(){
 <div className="container">
   <h2>About Us</h2>
   <ol>
-    <p> College students often face challenges with food waste due to tight budgets, 
-busy schedules, and limited cooking skills. Leftovers are frequently discarded, 
-leading to increased costs and environmental impact. Our project tackles this 
-problem with an AI-powered app that helps students creatively repurpose leftover ingredients, 
-promoting sustainability and saving money.</p>
+    <p> <span>College students often face challenges with food waste</span> due to tight budgets,
+       busy schedules, and limited cooking skills. Leftovers are frequently discarded,
+        leading to increased costs and environmental impact. Our project tackles this
+         problem with an AI-powered app that helps students creatively repurpose leftover
+          ingredients, promoting sustainability and saving money. </p>
+          
+          <p>
+          <span>We are a team of four Computer Science students</span> who decided to take action against food 
+          waste after realizing how often we and our peers were throwing away perfectly good ingredients.
+          With a shared passion for sustainability and technology, we combined our skills to develop an 
+          AI-driven solution that makes it easier for students to use what they already have in their 
+          kitchens. We believe that by turning leftovers into opportunities, we can make a difference 
+          both for students and for the environment.
+          </p>
+          <p>
+          <span>EcoEats</span> uses AI to suggest creative and easy-to-follow recipes based on the ingredients 
+          you have at hand, helping students save money, reduce waste, and learn more about cooking
+          in a fun, accessible way. Whether you’re new to cooking or simply trying to stretch your
+          budget, our app is here to inspire and empower you to make the most out of your food.</p>
   </ol>
 </div>
 </section>

@@ -10,7 +10,6 @@
 }
 *{
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
@@ -21,25 +20,28 @@
    align-items: center;
    justify-content: space-between;
    padding: 20px;
-   background-color: #90cfb775;;
+   background-color: #dbeca775;;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  }
 
 
  /* Styling the navbar */
  .navbar {
-   margin-left: 30px; /* Creates some space between logo and nav links */
+   margin-left: 0px; /* Creates some space between logo and nav links */
  }
  
  .navbar ul {
    display: flex; 
-   list-style: none; 
+   list-style: none;
  }
  
  /* Styling each navigation item */
  .navbar ul li {
    margin-right: 20px; 
- }
+   align-items: center 
+ ; 
+}
+
  
  .navbar ul li a {
    text-decoration: none;
@@ -242,6 +244,9 @@
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.2rem;
+}
+.about span{
+  font-weight: bold;
 }
 
 /* Footer */
