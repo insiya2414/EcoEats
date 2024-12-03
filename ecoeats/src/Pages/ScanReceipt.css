@@ -27,9 +27,11 @@
 }
 
 .sr-main-container h1 {
-    font-size: 30px;
-    color: var(--secondary-color); /* Using variable for dark blackish */
-    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #ffffff;
 }
 
 .sr-main-container p {
@@ -79,19 +81,21 @@
 .back-button-container {
     text-align: center;
     padding: 5px; /* Adjust padding as needed for spacing */
-}
-
-/* Back Button Styling */
-.back-button {
+  }
+  
+  
+  .back-button {
     background-color:#e5bc5c;
     color: white;
     border: none; /* Remove border */
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 30px;
-}
-
-.back-button:hover {
-    background-color: #ab8c44;
-}
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+  }

@@ -26,8 +26,10 @@ function Homepage(){
 </header>
 
 <section id="features" className="features">
-  <div className="feature-container">
+  <div className="feature-header">
     <h1>Features</h1>
+    </div>
+    <div className="feature-container">
   <p>Scan Receipt</p>
     <img src="/receipt.jpg" alt="Receipt Scanning" />
     <p>Personalized Recipe</p>
