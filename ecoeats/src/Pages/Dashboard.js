@@ -55,17 +55,18 @@ function Dashboard() {
         <div className="dashboard-wrapper">
             <div className="cards-container">
                 <div onClick={() => handleCardClick('scan')} className="receipt_card">
-                    <h3>Scan Receipt</h3>
+                    <div className="card-icon"><h3>Scan Receipt</h3></div>
                 </div>
                 <div onClick={() => handleCardClick('recipes')} className="recipes_card">
-                    <h3>Generate Recipes</h3>
+                    <div className="card-icon"><h3>Generate Recipes</h3></div>
                 </div>
                 <div onClick={() => handleCardClick('pantry')} className="pantry_card">
-                    <h3>Go to Pantry Items</h3>
+                    <div className="card-icon"><h3>Go to Pantry Items</h3></div> 
+                    
                 </div>
             </div>
         </div>
     );
-}
+}    
 
 export default Dashboard;

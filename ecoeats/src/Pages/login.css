@@ -1,0 +1,98 @@
+/* General styling for the authentication container */
+.auth-container {
+    width: 1000px; /* Set fixed width to create a compact look */
+    margin: 0 auto; /* Center horizontally */
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for card effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Shadow to add depth */
+    text-align: center; /* Center-align text for a cleaner look */
+    font-family: Arial, sans-serif; /* Font for better readability */
+    margin-top: 10%; /* Add margin to bring it down vertically */
+}
+
+/* Heading styles */
+.auth-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #31511E; /* Darker green for emphasis */
+    font-weight: bold;
+}
+
+/* Subheading styles */
+.auth-container p {
+    font-size: 1rem;
+    color: #777; /* Soft grey for secondary text */
+    margin-bottom: 20px;
+}
+
+/* Input field styles */
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Button styling */
+.auth-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #859F3D; /* Green background */
+    color: 1A1A19;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.auth-container button[type="submit"]:hover {
+    background-color: #e5bc5c; /* Slightly darker green on hover */
+}
+
+/* Toggle form link */
+.auth-container .toggle-link {
+    color: #31511E;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+.auth-container .toggle-link:hover {
+    color: #31511E; /* Darker shade of green */
+}
+
+/* Success message styling */
+.auth-container .success-message {
+    color: #31511E; /* Green color for success */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Error message styling */
+.auth-container .error-message {
+    color: #29100d; /* Red color for error */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* General focus effect for inputs */
+.auth-container input[type="text"]:focus,
+.auth-container input[type="email"]:focus,
+.auth-container input[type="password"]:focus {
+    border-color: #c3e6c4; /* Green border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Soft green glow */
+}

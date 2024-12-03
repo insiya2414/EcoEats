@@ -1,86 +1,101 @@
 /* Wrapper to center everything on the page */
+:root {
+    --primary-color: #859F3D;     /* Light olive green */
+    --secondary-color: #1A1A19;   /* Dark blackish */
+    --accent-color: #31511E;      /* Dark green */
+    --background-color: #e5bc5c;  /* Light mustard yellow */
+    --button-disabled-color: #df5c5c; /* Light red */
+    --text-color: #462013;        /* Dark brown */
+}
+
 .dashboard-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
-    background-color: #f0f4ef; /* Soft background color for elegance */
+    background-color: #dfeedd; /* Soft, neutral background for contrast */
 }
 
-/* Centered container */
+/* Centered container with a more spacious layout */
 .cards-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Spacing between cards */
     width: 80%;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 20px;
-    background-color: #eaf5e2;
-    border-radius: 13px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #859F3D; /* Bright background for container */
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.cards-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
-/* Individual card styling with background images */
+/* Individual card styling with more vibrant colors */
 .card,
 .receipt_card,
 .recipes_card,
-.pantry_card  {
-    width: 180px;
-    height: 220px;
+.pantry_card {
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    color: #3d3b3f;
-    font-weight: bold;
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 25px;
+    color: #000000;
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after,
+.receipt_card::after,
+.recipes_card::after,
+.pantry_card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(222, 213, 213, 0.281);
+    transition: background 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.card:hover::after,
+.receipt_card:hover::after,
+.recipes_card:hover::after,
+.pantry_card:hover::after {
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay on hover */
+}
+
+.card:hover,
+.receipt_card:hover,
+.recipes_card:hover,
+.pantry_card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Specific backgrounds for each card */
 .receipt_card {
-    
     background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('../assets/download receits.jpg');
+    url(/Users/kissahussain/EcoEats/ecoeats/public/receipt.jpg)
 }
 
 .recipes_card {
     background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('../assets/download receipes.jpg');
+    url(/Users/kissahussain/EcoEats/ecoeats/public/recipe.jpg)
 }
 
 .pantry_card {
     background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('../assets/food-pantry-shelves-8e01c831-2b2be0d3eade4b9e9ec3c7e7deb27027.jpg');
+    url('/Users/kissahussain/EcoEats/ecoeats/public/inventory.jpg');
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+/* Adjust text styling to stand out */
 
-/* Adjust text styling */
-.card h3 {
-    font-size: 1.3rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-}
+

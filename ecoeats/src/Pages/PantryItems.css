@@ -8,24 +8,12 @@
     --button-disabled-color: #df5c5c; /* Light red */
     --text-color: #462013;        /* Dark brown */
 }
-.pantry-container {
-    padding: 30px;
-    margin: 20px auto;
-    width: 90%; /* Use a percentage to scale dynamically */
-    max-width: 9000px; /* Limit the maximum width for large screens */
-    background-color: #859F3D;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-
-}
 
 .pantry-container img{
     max-height: 200px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;  
-    margin-left: 38%;
 }
 
 /* Header */
@@ -44,13 +32,27 @@
     padding: none;
 }
 
-/* Add New Item Form */
+.pantry-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all child elements horizontally */
+    padding: 40px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px; /* Limit the maximum width */
+    background-color: #859F3D; /* Using variable */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .pantry-form {
     display: flex;
     gap: 15px;
+    align-items: center; /* Vertically aligns form items */
+    justify-content: center; /* Horizontally centers the form */
     margin-bottom: 30px;
-    align-items: flex-start; /* Align items to the left */
 }
+
 
 .pantry-form label {
     font-weight: bold;
@@ -68,8 +70,7 @@
 }
 
 .pantry-form button {
-    padding: 10px 20px; /* Set padding for a fixed size */
-    width: auto; /* Ensure the button adjusts to content */
+    padding: 10px 20px 10px; /* Set padding for a fixed size */
     background-color: #31511E;
     color: white;
     border: none;
