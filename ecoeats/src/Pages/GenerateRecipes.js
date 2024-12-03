@@ -87,6 +87,7 @@ const GenerateRecipes = () => {
 
   {/* Title Section */}
     <h2 id="title-ing-recipe">Look Up Recipes</h2>
+    <img src="/recipe.jpg" alt="Receipt Scanning" />
     <p> Checkout the recipes by clicking on the card! </p>
 
   {/* Ingredient Input Section */}
