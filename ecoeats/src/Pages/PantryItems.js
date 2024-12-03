@@ -4,6 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../firebaseConfig'; // Ensure your Firebase configuration is set up and exported
 import { collection, getDocs, addDoc } from 'firebase/firestore'; // Firestore methods
 
+
+const getPantryItems = async () => {
+    const querySnapshot = await getDocs(collection(db, 'receipts'));
+    const pantryData = querySnapshot.docs.map(doc => doc.data().items).flat();
+    return pantryData.map(item => item.product);
+};
+
 function PantryItems() {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -113,3 +120,4 @@ function PantryItems() {
 }
 
 export default PantryItems;
+export {getPantryItems};

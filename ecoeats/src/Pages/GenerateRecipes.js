@@ -1,8 +1,9 @@
 // GenerateRecipes.js
-import { useState } from "react";
-import { useNavigation } from "react-router-dom";
+import { useState, useEffect } from "react";
+//import { useNavigation } from "react-router-dom";
 import './GenerateRecipes.css';
 import axios from 'axios';
+import { getPantryItems } from './PantryItems';
 //import { getFunctions, httpsCallable } from 'firebase/functions';
 
 
@@ -13,7 +14,16 @@ const GenerateRecipes = () => {
     const [recipes, setRecipes] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-  
+    const [pantryItems, setPantryItems] = useState([]);
+
+    useEffect(() => {
+        // Fetch pantry items when the component mounts
+        const fetchPantryItems = async () => {
+          const items = await getPantryItems();
+          setPantryItems(items);
+        };
+        fetchPantryItems();
+      }, []);
 
     
     const searchRecipes = async () => {
@@ -69,9 +79,14 @@ const GenerateRecipes = () => {
     }
   };
 
-    const addIngredient = (e) => {
+    const addIngredient = (e, pantryItem) => {
       e.preventDefault();
-      if (currentIngredient.trim()) {
+      if(pantryItem) {
+      const cleanItem = pantryItem.split('(')[0].trim();
+      if (!ingredients.includes(cleanItem)){
+        setIngredients([...ingredients, cleanItem]);
+      }
+    }else if (currentIngredient.trim()) {
         setIngredients([...ingredients, currentIngredient.trim()]);
         setCurrentIngredient('');
       }
@@ -84,7 +99,6 @@ const GenerateRecipes = () => {
     return (
 
       <div className="recipe-search-container">
-
   {/* Title Section */}
     <h2 id="title-ing-recipe">Look Up Recipes</h2>
     <img src="/recipe.jpg" alt="Receipt Scanning" />
@@ -92,7 +106,7 @@ const GenerateRecipes = () => {
 
   {/* Ingredient Input Section */}
   <div className="ingredient-input-container">
-    <form onSubmit={addIngredient}>
+    <form onSubmit={(e) => addIngredient(e)}>
       <input
         type="text"
         value={currentIngredient}
@@ -105,6 +119,22 @@ const GenerateRecipes = () => {
       </button>
     </form>
   </div>
+
+{/* Pantry Items Section */}
+<div className="pantry-items-container">
+  <h3>Pantry Items</h3>
+  <div className="pantry-items-list">
+    {pantryItems.map((item, index) => (
+      <button
+        key={index}
+        onClick={(e) => addIngredient(e, item)}
+        className="pantry-item-btn"
+      >
+        {item.split('(')[0].trim()}
+      </button>
+    ))}
+  </div>
+</div>
 
   {/* Ingredients List Section */}
   <div className="ingredients-list-container">

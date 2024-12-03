@@ -165,3 +165,34 @@ p{
   background-color: #0056b3; /* Darker blue on hover */
   transform: translateY(-2px);
 }
+
+/* Pantry Items Section Styling */
+.pantry-items-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pantry-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .pantry-item-btn {
+    padding: 10px 15px;
+    font-size: 15px;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pantry-item-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+  }
