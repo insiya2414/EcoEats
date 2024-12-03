@@ -196,3 +196,32 @@ p{
     color: white;
     transform: translateY(-2px);
   }
+
+  .toggle-pantry-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #31511E;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.toggle-pantry-btn:hover {
+    background-color: #e5bc5c;
+    color: #1A1A19;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

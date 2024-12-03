@@ -15,6 +15,7 @@ const GenerateRecipes = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [pantryItems, setPantryItems] = useState([]);
+    const [showPantryItems, setShowPantryItems] = useState(false);
 
     useEffect(() => {
         // Fetch pantry items when the component mounts
@@ -102,7 +103,9 @@ const GenerateRecipes = () => {
   {/* Title Section */}
     <h2 id="title-ing-recipe">Look Up Recipes</h2>
     <img src="/recipe.jpg" alt="Receipt Scanning" />
-    <p> Checkout the recipes by clicking on the card! </p>
+    <p> Checkout the recipes by clicking on the card! <br></br>
+        You can add in your pantry items to create delicious recipes!
+    </p>
 
   {/* Ingredient Input Section */}
   <div className="ingredient-input-container">
@@ -122,18 +125,26 @@ const GenerateRecipes = () => {
 
 {/* Pantry Items Section */}
 <div className="pantry-items-container">
-  <h3>Pantry Items</h3>
-  <div className="pantry-items-list">
-    {pantryItems.map((item, index) => (
-      <button
-        key={index}
-        onClick={(e) => addIngredient(e, item)}
-        className="pantry-item-btn"
-      >
-        {item.split('(')[0].trim()}
-      </button>
-    ))}
-  </div>
+  <button 
+    onClick={() => setShowPantryItems(!showPantryItems)}
+    className="toggle-pantry-btn"
+  >
+    {showPantryItems ? 'Hide Pantry Items' : 'Show Pantry Items'}
+  </button>
+  
+  {showPantryItems && (
+    <div className="pantry-items-list">
+      {pantryItems.map((item, index) => (
+        <button
+          key={index}
+          onClick={(e) => addIngredient(e, item)}
+          className="pantry-item-btn"
+        >
+          {item.split('(')[0].trim()}
+        </button>
+      ))}
+    </div>
+  )}
 </div>
 
   {/* Ingredients List Section */}
