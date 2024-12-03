@@ -82,92 +82,121 @@ const GenerateRecipes = () => {
     };
   
     return (
+
       <div className="recipe-search-container">
-        <h2 id = "title-ing-recipe">Search Recipes by Ingredients</h2>
-        
-        <div className="ingredient-input-section">
-          <form onSubmit={addIngredient}>
-            <input
-              type="text"
-              value={currentIngredient}
-              onChange={(e) => setCurrentIngredient(e.target.value)}
-              placeholder="Enter an ingredient"
-              className="ingredient-input"
-            />
-            <button type="submit" className="add-ingredient-btn">
-              Add Ingredient
-            </button>
-          </form>
-        </div>
-  
-        <div className="ingredients-list">
-          {ingredients.map((ingredient, index) => (
-            <div key={index} className="ingredient-tag">
-              {ingredient}
-              <button 
-                onClick={() => removeIngredient(index)}
-                className="remove-ingredient-btn"
-              >
-                ×
-              </button>
-            </div>
-          ))}
-        </div>
-  
-        <button 
-          onClick={searchRecipes} 
-          className="search-recipes-btn"
-          disabled={ingredients.length === 0 || isLoading}
+
+  {/* Title Section */}
+    <h2 id="title-ing-recipe">Look Up Recipes</h2>
+    <p> Checkout the recipes by clicking on the card! </p>
+
+  {/* Ingredient Input Section */}
+  <div className="ingredient-input-container">
+    <form onSubmit={addIngredient}>
+      <input
+        type="text"
+        value={currentIngredient}
+        onChange={(e) => setCurrentIngredient(e.target.value)}
+        placeholder="Enter an ingredient"
+        className="ingredient-input"
+      />
+      <button type="submit" className="add-ingredient-btn">
+        Add Ingredient
+      </button>
+    </form>
+  </div>
+
+  {/* Ingredients List Section */}
+  <div className="ingredients-list-container">
+    {ingredients.map((ingredient, index) => (
+      <div key={index} className="ingredient-tag">
+        {ingredient}
+        <button
+          onClick={() => removeIngredient(index)}
+          className="remove-ingredient-btn"
         >
-          {isLoading ? 'Searching...' : 'Search Recipes'}
+          ×
         </button>
-  
-        {error && (
-          <div className="error-message">
-            {error}
-          </div>
-        )}
-  
-        {isLoading && <div className="loading">Loading recipes...</div>}
-  
-        <div className="recipes-grid">
-  {recipes.map(recipe => (
-    <div 
-      key={recipe.id} 
-      className="recipe-card"
-      onClick={() => getRecipeDetails(recipe.id)}
-    >
-      <img src={recipe.image} alt={recipe.title} />
-      <h3>{recipe.title}</h3>
-      <div className="recipe-details">
-        <p>Used ingredients: {recipe.usedIngredientCount}</p>
-        <p>Missing ingredients: {recipe.missedIngredientCount}</p>
       </div>
+    ))}
+  </div>
 
-      {selectedRecipe && selectedRecipe.id === recipe.id && (
-        <div className="recipe-expanded-details">
-          <h4>Instructions:</h4>
-          <div dangerouslySetInnerHTML={{ __html: selectedRecipe.instructions }} />
-          
-          <h4>Ingredients Needed:</h4>
-          <ul>
-            {selectedRecipe.extendedIngredients.map((ingredient, index) => (
-              <li key={index}>{ingredient.original}</li>
-            ))}
-          </ul>
-
-          <div className="recipe-meta">
-            <p>Cooking Time: {selectedRecipe.readyInMinutes} minutes</p>
-            <p>Servings: {selectedRecipe.servings}</p>
-          </div>
-        </div>
-      )}
-    </div>
-  ))}
+  {/* Search Button Section */}
+  <div className="search-button-container">
+  <button
+    onClick={searchRecipes}
+    className="search-recipes-btn"
+    disabled={ingredients.length === 0 || isLoading}
+  >
+    {isLoading ? 'Searching...' : 'Find Recipes'}
+  </button>
 </div>
 
-      </div>
-    );
-  };
+{/* Back Button Section */}
+<div className="back-button-container">
+      <button onClick={() => window.history.back()} className="back-button">
+        &larr; 
+      </button>
+    </div>
+
+  {/* Error Message Section */}
+  {error && (
+    <div className="error-message-container">
+      <div className="error-message">{error}</div>
+    </div>
+  )}
+
+  {/* Loading State Section */}
+  {isLoading && (
+    <div className="loading-container">
+      <div className="loading">Loading recipes...</div>
+    </div>
+  )}
+
+  {/* Recipes Grid Section */}
+  <div className="recipes-grid-container">
+    <div className="recipes-grid">
+      {recipes.map((recipe) => (
+        <div
+          key={recipe.id}
+          className="recipe-card"
+          onClick={() => getRecipeDetails(recipe.id)}
+        >
+          <img src={recipe.image} alt={recipe.title} />
+          <h3>{recipe.title}</h3>
+          <div className="recipe-details">
+            <p>Used ingredients: {recipe.usedIngredientCount}</p>
+            <p>Missing ingredients: {recipe.missedIngredientCount}</p>
+          </div>
+
+          {/* Expanded Recipe Details Section */}
+          {selectedRecipe && selectedRecipe.id === recipe.id && (
+            <div className="recipe-expanded-details">
+              <h4>Instructions:</h4>
+              <div
+                dangerouslySetInnerHTML={{ __html: selectedRecipe.instructions }}
+              />
+
+              <h4>Ingredients Needed:</h4>
+              <ul>
+                {selectedRecipe.extendedIngredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient.original}</li>
+                ))}
+              </ul>
+
+              <div className="recipe-meta">
+                <p>Cooking Time: {selectedRecipe.readyInMinutes} minutes</p>
+                <p>Servings: {selectedRecipe.servings}</p>
+              </div>
+             
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+
+</div>
+    )
+};
   
   export default GenerateRecipes;

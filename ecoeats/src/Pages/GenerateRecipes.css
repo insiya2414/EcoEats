@@ -1,40 +1,160 @@
-body{
-    text-align: center;
+:root {
+  --primary-color: #859F3D;     /* Light olive green */
+  --secondary-color: #1A1A19;   /* Dark blackish */
+  --accent-color: #31511E;      /* Dark green */
+  --background-color: #e5bc5c;  /* Light mustard yellow */
+  --button-disabled-color: #df5c5c; /* Light red */
+  --text-color: #462013;        /* Dark brown */
 }
-.recipe-expanded-details {
-    padding: 15px;
-    margin-top: 15px;
-    background: #f5f5f5;
-    border-radius: 8px;
-  }
-  
-  .recipe-expanded-details h4 {
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  .recipe-expanded-details ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .recipe-expanded-details li {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .recipe-meta {
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-  }
-  
-  .recipe-card {
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
+/* Recipe Grid Styling */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Arranges the cards in rows of three */
+  gap: 20px; /* Adds space between cards */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* General Container Styling */
+.recipe-search-container {
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 2000px;
+  background-color: #99b745; /* Using variable */
+  margin: 40px auto;
+}
+
+h2{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+p{
+  color: #1A1A19; /* Using variable for dark brown */
+  margin-bottom: 20px;
+  font-weight: none;
+}
+
+/* Ingredient Input and Button Styling */
+.ingredient-input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ingredient-input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-ingredient-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #31511E;
+  color: white;
+  cursor: pointer;
+}
+
+.add-ingredient-btn:hover {
+  background-color: #e5bc5c;
+  color: #1A1A19;
+}
+
+/* Ingredients List Styling */
+.ingredients-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ingredient-tag {
+  margin: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.remove-ingredient-btn {
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+/* Loading and Error Message Styling */
+.loading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Search Button Styling *//* Search Button Container Styling for Centering */
+.search-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust the margin to control spacing from other elements */
+}
+
+/* Search Button Styling */
+.search-recipes-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #ffffff; /* Text color */
+  background-color: #42642e; /* Background color (green) */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-recipes-btn:hover {
+  color: #010101; /* Text color */
+  background-color: #e5bc5c; /* Darker shade when hovering */
+  transform: translateY(-2px); /* Button moves up slightly on hover */
+}
+
+.search-recipes-btn:disabled {
+  background-color: #beb694; /* Greyed out when disabled */
+  cursor: not-allowed;
+}
+
+/* Back Button Styling */
+.back-button-container {
+  text-align: center;
+  padding: 5px; /* Adjust padding as needed for spacing */
+}
+
+
+.back-button {
+  background-color:#e5bc5c;
+  color: white;
+  border: none; /* Remove border */
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
