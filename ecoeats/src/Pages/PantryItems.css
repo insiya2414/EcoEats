@@ -1,32 +1,52 @@
 /* Pantry Section Styling */
+
+:root {
+    --primary-color: #859F3D;     /* Light olive green */
+    --secondary-color: #1A1A19;   /* Dark blackish */
+    --accent-color: #31511E;      /* Dark green */
+    --background-color: #e5bc5c;  /* Light mustard yellow */
+    --button-disabled-color: #df5c5c; /* Light red */
+    --text-color: #462013;        /* Dark brown */
+}
 .pantry-container {
-    padding: 20px;
+    padding: 30px;
     margin: 20px auto;
     width: 90%; /* Use a percentage to scale dynamically */
-    max-width: 800px; /* Limit the maximum width for large screens */
-    background-color: #ffffff;
+    max-width: 9000px; /* Limit the maximum width for large screens */
+    background-color: #859F3D;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+
+}
+
+.pantry-container img{
+    max-height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;  
+    margin-left: 38%;
 }
 
 /* Header */
 .pantry-container h1 {
     font-size: 1.8rem;
-    color: #2D6A4F; /* Dark green */
+    color: white; /* Dark green */
     text-align: center;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
 .pantry-container h2 {
     font-size: 1.2rem;
-    color: #40916C; /* Lighter green */
+    color: white; /* Lighter green */
     margin-bottom: 10px;
+    padding: none;
 }
 
 /* Add New Item Form */
 .pantry-form {
     display: flex;
-    flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
     align-items: flex-start; /* Align items to the left */
@@ -34,13 +54,13 @@
 
 .pantry-form label {
     font-weight: bold;
-    color: #2D6A4F;
+    color: #31511E;
 }
 
 .pantry-form input {
     padding: 8px;
     font-size: 1rem;
-    border: 1px solid #B7E4C7;
+    border: 1px solid #fbfbfb;
     border-radius: 5px;
     background-color: #F0FDF4;
     width: 100%; /* Make inputs responsive */
@@ -50,17 +70,17 @@
 .pantry-form button {
     padding: 10px 20px; /* Set padding for a fixed size */
     width: auto; /* Ensure the button adjusts to content */
-    background-color: #2D6A4F;
+    background-color: #31511E;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .pantry-form button:hover {
-    background-color: #40916C; /* Slightly lighter green */
+    background-color: #e5bc5c; /* Slightly lighter green */
 }
 
 /* Pantry Items List */
@@ -73,7 +93,7 @@
     padding: 15px;
     margin-bottom: 15px;
     background-color: #E9F5E9;
-    border: 1px solid #B7E4C7;
+    border: 1px solid #c1d93a;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -87,7 +107,7 @@
 
 .pantry-list li h2 {
     font-size: 1rem;
-    color: #2D6A4F;
+    color: #31511E;
     margin-bottom: 10px;
 }
 

@@ -1,25 +1,101 @@
-input {
-    margin-bottom: 10px;
+/* Define CSS variables for the theme */
+:root {
+    --primary-color: #859F3D;     /* Light olive green */
+    --secondary-color: #1A1A19;   /* Dark blackish */
+    --accent-color: #31511E;      /* Dark green */
+    --background-color: #e5bc5c;  /* Light mustard yellow */
+    --button-disabled-color: #df5c5c; /* Light red */
+    --text-color: #462013;        /* Dark brown */
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #4caf50;
+.sr-main-container {
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    background-color: #859F3D; /* Using variable */
+    margin: 40px auto;
+}
+
+.sr-main-container img {
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;   
+}
+
+.sr-main-container h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.sr-main-container p {
+    color: var(--text-color); /* Using variable for dark brown */
+    margin-bottom: 20px;
+}
+
+.sr-main-container input[type="file"] {
+    margin-bottom: 20px;
+}
+
+/* Uploaded Image Container */
+.uploaded-image {
+    margin-top: 20px;
+}
+
+/* Uploaded Image Styling */
+.uploaded-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Scan Button Styling */
+.scan-button {
+    background-color: var(--accent-color); /* Using dark green variable */
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
-button:disabled {
-    background-color: #ccc;
+.scan-button:disabled {
+    background-color: var(--button-disabled-color); /* Using light red variable */
     cursor: not-allowed;
 }
 
-img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    max-width: 100%;
-    height: auto;
+.message {
+    font-size: 1rem;
+    color: #ae3030; /* Dark red color for the message text */
+    margin-top: 20px;
 }
+
+.back-button-container {
+    text-align: center;
+    padding: 5px; /* Adjust padding as needed for spacing */
+  }
+  
+  
+  .back-button {
+    background-color:#e5bc5c;
+    color: white;
+    border: none; /* Remove border */
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+  }
