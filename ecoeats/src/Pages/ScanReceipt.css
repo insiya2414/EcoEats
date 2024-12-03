@@ -8,7 +8,6 @@
     --text-color: #462013;        /* Dark brown */
 }
 
-/* Main Container Styling */
 .sr-main-container {
     text-align: center;
     border-radius: 8px;
@@ -16,11 +15,10 @@
     padding: 30px;
     width: 90%;
     max-width: 900px;
-    background-color: var(--background-color); /* Using variable */
+    background-color: #859F3D; /* Using variable */
     margin: 40px auto;
 }
 
-/* Image inside the Main Container */
 .sr-main-container img {
     max-height: 300px;
     border-radius: 8px;
@@ -28,20 +26,17 @@
     margin-bottom: 20px;   
 }
 
-/* Heading Styling */
 .sr-main-container h1 {
-    font-size: 1.8rem;
+    font-size: 30px;
     color: var(--secondary-color); /* Using variable for dark blackish */
     margin-bottom: 10px;
 }
 
-/* Paragraph Styling */
 .sr-main-container p {
     color: var(--text-color); /* Using variable for dark brown */
     margin-bottom: 20px;
 }
 
-/* File Input Styling */
 .sr-main-container input[type="file"] {
     margin-bottom: 20px;
 }
@@ -70,15 +65,33 @@
     margin-top: 10px;
 }
 
-/* Disabled Scan Button Styling */
 .scan-button:disabled {
     background-color: var(--button-disabled-color); /* Using light red variable */
     cursor: not-allowed;
 }
 
-/* Message Text Styling */
 .message {
     font-size: 1rem;
     color: #ae3030; /* Dark red color for the message text */
     margin-top: 20px;
+}
+
+.back-button-container {
+    text-align: center;
+    padding: 5px; /* Adjust padding as needed for spacing */
+}
+
+/* Back Button Styling */
+.back-button {
+    background-color:#e5bc5c;
+    color: white;
+    border: none; /* Remove border */
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.back-button:hover {
+    background-color: #ab8c44;
 }
