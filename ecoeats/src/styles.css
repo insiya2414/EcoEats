@@ -25,7 +25,6 @@
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  }
 
- /* Styling the logo */
 
  /* Styling the navbar */
  .navbar {
@@ -62,9 +61,11 @@
  .btn {
    text-decoration: none;
    padding: 10px 20px;
-   background-color: #450808; /* Button background color */
+   background-color: #859F3D; /* Button background color */
    color: #fff; /* Button text color */
    border-radius: 50px;
+   font-size: 25px;
+   font-weight: bold;
    transition: background-color 0.3s ease; /* Smooth transition on hover */
  }
  
@@ -196,9 +197,6 @@
   }
 }
 
-
-
-
 /* How It Works Section */
 .how-it-works {
   padding: 4rem 0;
@@ -277,8 +275,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f5f5f5;
 }
 
 .login-container h2,
@@ -290,7 +286,7 @@
 .auth-container p {
   margin-bottom: 25px;
   font-size: 1.2rem; 
-  color: #555;
+  color: #6c2c2c;
 }
 
 .login-container form,
@@ -307,18 +303,6 @@
   font-size: 1.2rem;
   border: 1px solid #ddd;
   border-radius: 6px;
-}
-
-.login-container button,
-.auth-container button {
-  padding: 15px;
-  font-size: 1.2rem; 
-  cursor: pointer;
-  background-color: #158839;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  margin-top: 15px;
 }
 
 .toggle-link {
