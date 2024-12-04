@@ -63,17 +63,18 @@
  .btn {
    text-decoration: none;
    padding: 10px 20px;
-   background-color: #859F3D; /* Button background color */
+   background-color: #ce7b29; /* Button background color */
    color: #fff; /* Button text color */
    border-radius: 50px;
-   font-size: 25px;
+   font-size: 20px;
    font-weight: bold;
    transition: background-color 0.3s ease; /* Smooth transition on hover */
  }
  
  .btn:hover {
-   background-color: #e77f18; /* Darker shade on hover */
+   background-color: #859F3D; /* Darker shade on hover */
  }
+ 
 
  @media (max-width: 768px) {
   /* Hide navigation links and button */
@@ -141,7 +142,7 @@
 .hero .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #284f2d;
+  background-color: #ce7b29;
   font-weight: 80px;
   color: #fff;
   text-decoration: none;
