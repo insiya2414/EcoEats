@@ -152,7 +152,7 @@
 }
 
 .hero .btn:hover {
-  background-color: #450808;
+  background-color:var(--accent-color);
 }
 
 /* Features Section */
