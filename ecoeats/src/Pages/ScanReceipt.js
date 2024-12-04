@@ -447,23 +447,36 @@ function ScanReceipt() {
                 <img src="/receipt.jpg" alt="Receipt Scanning" />
                 <h1>Scan Receipt</h1>
                 <p>Upload an image of your receipt.</p>
-
-                <input type="file" accept="image/*" onChange={handleImageUpload} />
-
+    
+                {/* Hide file input and use a custom button */}
+                <input
+                    type="file"
+                    accept="image/*"
+                    id="file-input"
+                    onChange={handleImageUpload}
+                    style={{ display: 'none' }} // Hide the default file input
+                />
+                <button
+                    onClick={() => document.getElementById('file-input').click()}
+                    className="upload-button"
+                >
+                    Upload Receipt
+                </button>
+    
                 {image && (
                     <div className="uploaded-image">
                         <h3>Uploaded Image:</h3>
                         <img src={image} alt="Uploaded Receipt" />
                     </div>
                 )}
-
+    
                 <button onClick={handleSaveHardcodedData} disabled={loading} className="scan-button">
                     {loading ? 'Saving...' : 'Save'}
                 </button>
-
+    
                 {message && <p className="message">{message}</p>}
             </div>
-
+    
             <div className="back-button-container">
                 <button onClick={() => window.history.back()} className="back-button">
                     &larr;
@@ -471,6 +484,7 @@ function ScanReceipt() {
             </div>
         </>
     );
+    
 }
 
 export default ScanReceipt;
